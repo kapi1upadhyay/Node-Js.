@@ -1,0 +1,9 @@
+const fs=require("fs");
+fs.writeFileSync("read.txt","Yes ,You are a player.");
+fs.appendFileSync("read.txt","You are telling a lie,You are a looser.")
+const buf_data=fs.readFileSync("read.txt")
+console.log(buf_data);
+//<Buffer 59 65 73 20 2c 59 6f 75 20 61 72 65 20 61 20 70 6c 61 79 65 72 2e 59 6f 75 20 61 72 65 20 74 65 6c 6c 69 6e 67 20 61 20 6c 69 65 2c 59 6f 75 20 61 72 ... 11 more bytes>
+fs.renameSync("read.txt","readwrite.txt") //rename file name
+fs.unlinkSync("readwrite.txt")  //delete files
+fs.rmdirSync("folder_name") //remove folder
